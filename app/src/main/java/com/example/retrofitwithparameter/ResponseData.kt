@@ -1,12 +1,13 @@
 package com.example.retrofitwithparameter
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ResponseData(
-        val status: String,
+        val status: Int,
         val message: String,
         val result: FieldData
-)
+):Serializable
 
 data class FieldData(
         @SerializedName("userId")
@@ -21,4 +22,4 @@ data class FieldData(
         val userImage: String,
         @SerializedName("user_lang")
         val userLang: String
-)
+):Serializable

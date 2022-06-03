@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface MyAPI {
     @Headers("Auth-key:familyrestapi")
-    @POST("loginUserAndroid")
+    @POST("loginUser")
     fun getData(@Body myData: MyData): Call<ResponseData>
 
 }
